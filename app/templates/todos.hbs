@@ -1,0 +1,15 @@
+{{outlet}}
+<div class="container">
+  <h2>Todos</h2>
+  <ul class="list-group">
+
+    {{#each model as |todo|}}
+      <li class="list-group-item">
+        {{todo.title}}
+        {{#link-to 'todos.edit' todo}}  <button class="btn btn-info btn-sm">Edit</button>{{/link-to}}
+        <button {{action 'deleteTodo' todo}} class="btn btn-danger btn-sm">Delete</button>
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
