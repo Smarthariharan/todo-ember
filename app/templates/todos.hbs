@@ -1,8 +1,12 @@
 {{outlet}}
 <div class="container">
   <h2>Todos</h2>
-  <ul class="list-group">
 
+  <!-- Delete All Button -->
+  <button {{action 'deleteAllTodos'}} class="btn btn-danger mb-3">Delete All</button>
+  <br>
+  <br>
+  <ul class="list-group">
     {{#each model as |todo|}}
       <li class="list-group-item">
         {{todo.title}}
