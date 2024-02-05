@@ -1,9 +1,23 @@
 {{outlet}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <div class="container">
   <h2>Todos</h2>
-
+  <div>
+<form action="" method="GET">            
+ <div class="input-group">
+   <input type="text" class="form-control" placeholder="Search..." id="txtSearch"/>
+   <div class="input-group-btn">
+        <button class="btn btn-primary" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+        </button>
+   </div>
+   </div>
+</form>
+</div>
+<br>
   <!-- Delete All Button -->
-  <button {{action 'deleteAllTodos'}} class="btn btn-danger mb-3">Delete All</button>
+  <button {{action 'deleteAllTodos'}} class="btn btn-danger pull-right">Delete All</button>
   <br>
   <br>
   <ul class="list-group">

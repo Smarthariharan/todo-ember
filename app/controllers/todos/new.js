@@ -8,7 +8,8 @@ export default Ember.Controller.extend({
        let newTask = this.store.createRecord('todo',{
          title: title,
        });
-            newTask.save();
+       
+        newTask.save();
        console.log(title+ " ");
   
         

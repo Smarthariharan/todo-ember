@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
 
   actions: {
     // written for delete a todo in DB
-    deleteTodo(todo) {
+    deleteTodo(todo) { 
       todo.destroyRecord();
     },
     // written for delete_all_todos in todos DB
@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
         this.set('todoDeletion.message', 'Deletion completed successfully.');
         this.transitionToRoute('todos');
       }).catch((err) => {
-        console.error('Error deleting all todos:', error);
+        console.error('Error deleting all todos: ', err);
         this.set('todoDeletion.status', 'error');
         this.set('todoDeletion.message', 'Error occurred during deletion.');
       });
